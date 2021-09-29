@@ -51,6 +51,6 @@
         app:duration="400">
         <OnClick
             app:clickAction="toggle"
-            app:targetId="@id/tvGlobalRates" />
+            app:targetId="@id/relativeLayout" />
     </Transition>
 </MotionScene>

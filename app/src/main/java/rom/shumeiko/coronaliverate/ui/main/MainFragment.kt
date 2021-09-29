@@ -1,11 +1,14 @@
 package rom.shumeiko.coronaliverate.ui.main
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import rom.shumeiko.coronaliverate.R
@@ -54,24 +57,25 @@ class MainFragment : Fragment() {
     }
 
     private fun initViews() {
-        val globalRate = StatisticHolder.globalRate
         binding.globalRates.paramCoronavirusCases.ivIcon.setImageResource(R.drawable.ic_coronavirus_cases)
         binding.globalRates.paramCoronavirusCases.tvTitle.text = resources.getString(R.string.fragment_country_coronavirus_cases)
-
-
 
         binding.globalRates.paramDeath.ivIcon.setImageResource(R.drawable.ic_death)
         binding.globalRates.paramDeath.tvTitle.text = resources.getString(R.string.fragment_country_death)
 
-
         binding.globalRates.paramRecovered.ivIcon.setImageResource(R.drawable.ic_hearth)
         binding.globalRates.paramRecovered.tvTitle.text = resources.getString(R.string.fragment_country_recovered)
 
+        val globalRate = StatisticHolder.globalRate
+        if (globalRate != null) {
+            binding.globalRates.paramCoronavirusCases.tvValue.text = UIUtils.formatCases(globalRate.cases)
+            binding.globalRates.paramDeath.tvValue.text = UIUtils.formatCases(globalRate.deaths)
+            binding.globalRates.paramRecovered.tvValue.text = UIUtils.formatCases(globalRate.recovered)
+            binding.globalRates.paramRecovered.tvValue.setTextColor(ContextCompat.getColor(requireContext(), R.color.green_200))
+        }
 
+        Log.v("GlobalRate","")
 
-
-
-        
         binding.imbMenu.setOnClickListener {
             val menuDialogFragment = MenuDialogFragment()
             menuDialogFragment.onYourCountryClickedListener = onYourCountryClickedListener
