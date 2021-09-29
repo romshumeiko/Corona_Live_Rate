@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_double_margin"
+        android:background="@drawable/bg_menu_dialog">
+
+        <RelativeLayout
+            android:id="@+id/rlLogoAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/default_margin">
+
+            <include
+                android:id="@+id/logoAppName"
+                layout="@layout/item_logo_app_name" />
+
+            <ImageView
+                android:id="@+id/ivCloseDialog"
+                android:layout_width="@dimen/fragment_menu_dialog_iv_close_dialog_size"
+                android:layout_height="@dimen/fragment_menu_dialog_iv_close_dialog_size"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/default_big_margin"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_close_btn" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/yourCountry"
+            layout="@layout/item_menu_dialog_value"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fragment_menu_dialog_height"
+            android:layout_below="@id/rlLogoAppName" />
+
+        <include
+            android:id="@+id/getBitminder"
+            layout="@layout/item_menu_dialog_value"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fragment_menu_dialog_height"
+            android:layout_below="@id/yourCountry" />
+    </RelativeLayout>
+
+</RelativeLayout>

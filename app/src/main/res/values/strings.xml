@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Corona Live Rate</string>
+    <!--NavigationActivity-->
+    <string name="navigation_activity_select_your_country">Select your Country</string>
+    <string name="navigation_activity_all_countries">All Countries</string>
+
+    <!--FragmentCountries-->
+    <string name="fragment_countries_edt_search_hint">Search your country</string>
+
+    <!--FragmentParamsDialog-->
+    <string name="fragment_params_dialog_tv_title_text">You can not active this filter</string>
+    <string name="fragment_params_dialog_btn_dialog_ok_text">OK</string>
+
+    <!--ItemToolbar-->
+    <string name="item_toolbar_tv_toolbar_title_text">Select your country</string>
+
+    <!--FragmentMain-->
+    <string name="fragment_main_tv_app_name_text">Corona\nLive Rate</string>
+    <string name="fragment_main_tv_title_statistic_of_24_hours_text">From 24 hours ago</string>
+    <string name="fragment_main_tv_text">Top Countries</string>
+    <string name="fragment_main_tv_show_all_countries">Show all</string>
+
+    <!--FragmentCountry-->
+    <string name="fragment_country_coronavirus_cases">Coronavirus Cases</string>
+    <string name="fragment_country_death">Death</string>
+    <string name="fragment_country_recovered">Recovered</string>
+    <string name="fragment_country_recovered_discharged">Recovered / Discharged</string>
+    <string name="fragment_country_rb_yesterday_text">Yesterday</string>
+    <string name="fragment_country_rb_today_text">Today</string>
+    <string name="fragment_country_tv_title_active_cases_text">Active Cases</string>
+    <string name="fragment_country_tv_description_active_cases_text">Currently infected Patients</string>
+    <string name="fragment_country_tv_title_closed_cases_text">Closed Cases</string>
+    <string name="fragment_country_tv_description_closed_cases_text">Cases which had an outcome :</string>
+    
+    <!--ParamsViewModel-->
+    <string name="params_view_model_less_one_param">You cannot select less than 1 filter</string>
+    <string name="params_view_model_more_three_param">You are allowed to select 3 filters. To activate the other one please disable one of your current filters.</string>
+
+    <!--FragmentMenuDialog-->
+    <string name="fragment_menu_dialog_your_country">Your Country</string>
+    <string name="fragment_menu_dialog_get_bitminder">Get Bitminder</string>
+
+
+    <string name="global_rates">Global rates</string>
+
+
+</resources>

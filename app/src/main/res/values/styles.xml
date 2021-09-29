@@ -1,0 +1,49 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <style name="ToolbarImageButtonStyle">
+        <item name="android:layout_width">@dimen/toolbar_image_button_style_margin</item>
+        <item name="android:layout_height">@dimen/toolbar_image_button_style_margin</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="ToolbarImbBackStyle" parent="ToolbarImageButtonStyle">
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="android:layout_marginStart">@dimen/toolbar_image_button_style_margin</item>
+    </style>
+
+    <style name="ToolbarImbMenuStyle" parent="ToolbarImageButtonStyle">
+        <item name="android:src">@drawable/ic_menu</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">@dimen/toolbar_image_button_style_margin</item>
+    </style>
+
+    <style name="ToolbarImageButtonStyle.Back">
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="android:layout_marginStart">@dimen/toolbar_image_button_style_margin</item>
+    </style>
+
+    <style name="ToolbarImageButtonStyle.Menu">
+        <item name="android:src">@drawable/ic_menu</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">@dimen/toolbar_image_button_style_margin</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/gray_200</item>
+    </style>
+
+</resources>

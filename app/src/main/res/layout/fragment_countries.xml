@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_200">
+
+    <FrameLayout
+        android:id="@+id/flToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/item_toolbar" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_countries_edt_search_height"
+        android:layout_below="@id/flToolbar"
+        android:layout_marginHorizontal="@dimen/default_double_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@drawable/selector_item_country"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/default_big_margin"
+        android:gravity="start|center_vertical"
+        android:hint="@string/fragment_countries_edt_search_hint"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/default_margin"
+        android:textColorHint="@color/gray_100"
+        android:textSize="@dimen/default_text_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCountries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edtSearch"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/fragment_countries_rv_countries_padding" />
+
+</RelativeLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_200">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.NavigationActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_100">
+
+            <include
+                android:id="@+id/globalRates"
+                layout="@layout/item_global_rates" />
+
+            <FrameLayout
+                android:id="@+id/flLogoAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/globalRates"
+                android:layout_marginStart="@dimen/default_margin">
+
+                <include
+                    android:id="@+id/logoAppName"
+                    layout="@layout/item_logo_app_name" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/imbMenu"
+                style="@style/ToolbarImbMenuStyle"
+                android:layout_alignTop="@id/flLogoAppName"
+                android:layout_alignBottom="@id/flLogoAppName"
+                android:src="@drawable/ic_menu" />
+
+            <ImageButton
+                android:id="@+id/imbParams"
+                android:layout_width="@dimen/fragment_main_imb_params_width"
+                android:layout_height="@dimen/fragment_main_imb_params_height"
+                android:layout_below="@id/flLogoAppName"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_double_margin"
+                android:background="@drawable/bg_item"
+                android:src="@drawable/ic_filters_live_selection" />
+
+            <RelativeLayout
+                android:id="@+id/rlFirstParam"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_main_imb_params_height"
+                android:layout_alignTop="@id/imbParams"
+                android:layout_marginStart="@dimen/default_double_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_half_margin"
+                android:layout_toStartOf="@+id/imbParams"
+                android:background="@drawable/bg_item">
+
+                <ImageView
+                    android:id="@+id/ivIconFirstParam"
+                    android:layout_width="@dimen/default_param_icon_size"
+                    android:layout_height="@dimen/default_param_icon_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_total_cases" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCountLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ivIconFirstParam"
+                    android:layout_alignBottom="@+id/ivIconFirstParam"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_toEndOf="@id/ivIconFirstParam">
+
+                    <TextView
+                        android:id="@+id/tvCountFirstParam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_100"
+                        android:textSize="@dimen/default_text_size"
+                        tools:text="80,967" />
+
+                    <TextView
+                        android:id="@+id/tvTitleFirstParam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCountFirstParam"
+                        android:textColor="@color/gray_100"
+                        tools:text="Total Case" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rlCountLive"
+                    android:layout_alignBottom="@id/rlCountLive"
+                    android:layout_marginStart="@dimen/default_half_margin"
+                    android:layout_toEndOf="@id/rlCountLive">
+
+                    <TextView
+                        android:id="@+id/tvStatisticOf24Hours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/red_100"
+                        android:textSize="@dimen/default_text_size"
+                        tools:text="+4%" />
+
+                    <TextView
+                        android:id="@+id/tvTitleStatisticOf24Hours"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tvStatisticOf24Hours"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/fragment_main_tv_title_statistic_of_24_hours_text"
+                        android:textColor="@color/gray_100"
+                        android:textSize="@dimen/fragment_main_tv_title_statistic_of_24_hours_text_size" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llSecondAndThirdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlFirstParam"
+                android:layout_marginHorizontal="@dimen/default_double_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_big_margin"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llSecondView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fragment_main_llSecondView_height"
+                    android:layout_marginEnd="@dimen/default_half_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_item"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivIconSecondParam"
+                        android:layout_width="@dimen/default_param_icon_size"
+                        android:layout_height="@dimen/default_param_icon_size"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/default_big_margin"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_death" />
+
+                    <TextView
+                        android:id="@+id/tvCountSecondParam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:textColor="@color/black_100"
+                        android:textSize="@dimen/default_text_size"
+                        tools:text="3,248" />
+
+                    <TextView
+                        android:id="@+id/tvTitleSecondParam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/fragment_main_tv_title_second_param_margin_top"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_100"
+                        android:textSize="@dimen/default_small_text_size"
+                        tools:text="Total Deaths" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fragment_main_fl_height"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/llThirdParam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/default_half_margin"
+                        android:background="@drawable/bg_item"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivIconThirdView"
+                            android:layout_width="@dimen/default_param_icon_size"
+                            android:layout_height="@dimen/default_param_icon_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/default_big_margin"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_hearth" />
+
+                        <TextView
+                            android:id="@+id/tvCountThirdParam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:textColor="@color/black_100"
+                            android:textSize="@dimen/default_text_size"
+                            tools:text="17,392" />
+
+                        <TextView
+                            android:id="@+id/tvTitleThirdParam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/fragment_main_tv_title_third_param_margin_top"
+                            android:maxLines="1"
+                            android:textColor="@color/gray_100"
+                            android:textSize="@dimen/default_small_text_size"
+                            tools:text="Total Recovered" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTopCountries"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_double_margin"
+            android:layout_below="@id/rlMain"
+            android:layout_marginTop="@dimen/default_big_margin"
+            android:layout_marginBottom="@dimen/default_half_margin">
+
+            <ImageView
+                android:id="@+id/ivEarth"
+                android:layout_width="@dimen/default_double_margin"
+                android:layout_height="@dimen/default_double_margin"
+                android:layout_marginStart="@dimen/fragment_main_iv_earth_margin_start"
+                android:src="@drawable/ic_earth" />
+
+            <ImageView
+                android:id="@+id/ivShowAllCountries"
+                android:layout_width="@dimen/default_half_margin"
+                android:layout_height="@dimen/default_half_margin"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/default_double_margin"
+                android:src="@drawable/ic_show_all_countries" />
+
+            <FrameLayout
+                android:id="@+id/flShowAllCountries"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/default_double_margin"
+                android:layout_marginEnd="@dimen/default_half_margin"
+                android:layout_toStartOf="@id/ivShowAllCountries">
+
+                <TextView
+                    android:id="@+id/tvShowAllCountries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/fragment_main_tv_show_all_countries"
+                    android:textSize="@dimen/default_small_text_size" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/default_big_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_toStartOf="@id/flShowAllCountries"
+                android:layout_toEndOf="@id/ivEarth"
+                android:text="@string/fragment_main_tv_text"
+                android:textSize="@dimen/default_text_size" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frNavigationFragment"
+            android:name="SimpleFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTopCountries" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

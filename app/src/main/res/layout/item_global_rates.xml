@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/default_double_margin"
+    android:layout_marginBottom="@dimen/default_margin"
+    android:background="@drawable/bg_item_global_rates"
+    app:layoutDescription="@xml/item_global_rates_scene">
+
+    <TextView
+        android:id="@+id/tvGlobalRates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/global_rates"
+        android:textColor="@color/gray_100"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/ivGlobalRates"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivGlobalRates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selector_item_global_rates"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGlobalRates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvGlobalRates"
+        app:layout_constraintTop_toTopOf="@+id/tvGlobalRates" />
+
+
+    <include
+        android:id="@+id/paramCoronavirusCases"
+        layout="@layout/item_param_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_param_value_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGlobalRates" />
+
+    <include
+        android:id="@+id/paramDeath"
+        layout="@layout/item_param_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_param_value_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paramCoronavirusCases" />
+
+    <include
+        android:id="@+id/paramRecovered"
+        layout="@layout/item_param_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_param_value_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paramDeath" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

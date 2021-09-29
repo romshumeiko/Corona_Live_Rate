@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_country_rl_root_height"
+    android:layout_marginHorizontal="@dimen/default_double_margin"
+    android:layout_marginTop="@dimen/default_text_size"
+    android:background="@drawable/selector_item_country">
+
+    <ImageView
+        android:id="@+id/ivFlag"
+        android:layout_width="@dimen/item_country_iv_flag_width"
+        android:layout_height="@dimen/item_country_iv_flag_height"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/default_margin"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_afghanistan" />
+
+    <TextView
+        android:id="@+id/tvTitleCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/default_big_margin"
+        android:layout_marginEnd="@dimen/default_big_margin"
+        android:layout_toEndOf="@id/ivFlag"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black_100"
+        android:textSize="@dimen/default_text_size"
+        tools:text="Country" />
+
+</RelativeLayout>

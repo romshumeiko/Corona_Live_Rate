@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_100"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/item_toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/rlCountryCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar"
+            android:layout_marginHorizontal="@dimen/default_double_margin"
+            android:layout_marginTop="@dimen/default_big_margin"
+            android:background="@drawable/bg_item">
+
+            <RelativeLayout
+                android:id="@+id/rlCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/rgTodayYesterday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_big_margin"
+                    android:layout_marginBottom="@dimen/default_big_margin"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbYesterday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/default_half_margin"
+                        android:background="@drawable/bg_check_today_yesterday"
+                        android:button="@null"
+                        android:paddingHorizontal="@dimen/default_half_margin"
+                        android:text="@string/fragment_country_rb_yesterday_text"
+                        android:textColor="@drawable/bg_color_check_day_yesterday" />
+
+                    <RadioButton
+                        android:id="@+id/rbToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_check_today_yesterday"
+                        android:button="@null"
+                        android:checked="true"
+                        android:paddingHorizontal="@dimen/default_half_margin"
+                        android:text="@string/fragment_country_rb_today_text"
+                        android:textColor="@drawable/bg_color_check_day_yesterday" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rgTodayYesterday"
+                    android:layout_alignBottom="@id/rgTodayYesterday"
+                    android:layout_marginStart="@dimen/fragment_country_tv_country_margin_start"
+                    android:layout_marginEnd="@dimen/default_half_margin"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black_100"
+                    android:textSize="@dimen/default_text_size"
+                    tools:text="Spain" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/paramCases"
+                layout="@layout/item_param_value"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_param_value_height"
+                android:layout_below="@id/rlCountry" />
+
+            <include
+                android:id="@+id/paramDeaths"
+                layout="@layout/item_param_value"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_param_value_height"
+                android:layout_below="@id/paramCases" />
+
+            <include
+                android:id="@+id/paramRecovered"
+                layout="@layout/item_param_value"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_param_value_height"
+                android:layout_below="@id/paramDeaths" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivFlag"
+            android:layout_width="@dimen/fragment_country_iv_flag_size"
+            android:layout_height="@dimen/fragment_country_iv_flag_size"
+            android:layout_alignTop="@+id/rlCountryCases"
+            android:layout_marginStart="@dimen/fragment_country_iv_flag_margin_start"
+            android:layout_marginTop="@dimen/fragment_country_iv_flag_margin_top"
+            android:src="@drawable/ic_hearth" />
+
+        <RelativeLayout
+            android:id="@+id/rlActiveCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCountryCases"
+            android:layout_marginHorizontal="@dimen/default_double_margin"
+            android:layout_marginTop="@dimen/default_big_margin"
+            android:background="@drawable/bg_item">
+
+            <TextView
+                android:id="@+id/tvTitleActiveCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/fragment_country_tv_title_active_cases_text"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/default_small_text_size" />
+
+            <View
+                android:id="@+id/activeCasesDivider"
+                style="@style/DividerStyle"
+                android:layout_below="@id/tvTitleActiveCases"
+                android:layout_marginTop="@dimen/default_margin" />
+
+            <TextView
+                android:id="@+id/tvCountActiveCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activeCasesDivider"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/default_big_margin"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/default_text_size"
+                tools:text="17,774" />
+
+            <TextView
+                android:id="@+id/tvDescriptionActiveCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCountActiveCases"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_double_margin"
+                android:text="@string/fragment_country_tv_description_active_cases_text"
+                android:textColor="@color/gray_100" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlClosedCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlActiveCases"
+            android:layout_marginHorizontal="@dimen/default_double_margin"
+            android:layout_marginTop="@dimen/default_big_margin"
+            android:layout_marginBottom="@dimen/fragment_country_rl_closed_cases_margin_bottom"
+            android:background="@drawable/bg_item">
+
+            <TextView
+                android:id="@+id/tvTitleClosedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/fragment_country_tv_title_closed_cases_text"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/default_small_text_size" />
+
+            <View
+                android:id="@+id/closedCasesDivider"
+                style="@style/DividerStyle"
+                android:layout_below="@id/tvTitleClosedCases"
+                android:layout_marginTop="@dimen/default_margin" />
+
+            <TextView
+                android:id="@+id/tvCountClosedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/closedCasesDivider"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/default_big_margin"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/default_text_size"
+                tools:text="2,638" />
+
+            <TextView
+                android:id="@+id/tvDescriptionClosedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCountClosedCases"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:text="@string/fragment_country_tv_description_closed_cases_text"
+                android:textColor="@color/gray_100" />
+
+            <include
+                android:id="@+id/paramRecoveredDischarged"
+                layout="@layout/item_param_value_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_param_value_height"
+                android:layout_below="@id/tvDescriptionClosedCases"
+                android:layout_marginTop="17dp" />
+
+            <include
+                android:id="@+id/paramDeathsPercent"
+                layout="@layout/item_param_value_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_param_value_height"
+                android:layout_below="@id/paramRecoveredDischarged" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_param_value_height">
+
+    <View
+        android:id="@+id/activeCasesDivider"
+        style="@style/DividerStyle" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/default_param_icon_size"
+        android:layout_height="@dimen/default_param_icon_size"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/default_margin"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_coronavirus_cases" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_toStartOf="@id/tvValue"
+        android:layout_toEndOf="@id/ivIcon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_100"
+        android:textSize="@dimen/default_small_text_size"
+        tools:text="Coronavirus Cases" />
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/default_big_margin"
+        android:textColor="@color/black_100"
+        android:textSize="@dimen/default_text_size"
+        tools:text="20,412" />
+
+</RelativeLayout>

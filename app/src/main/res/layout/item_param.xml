@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_param_rv_root_height"
+    android:layout_marginHorizontal="@dimen/default_double_margin"
+    android:layout_marginTop="@dimen/default_big_margin"
+    android:background="@drawable/bg_item">
+
+    <ImageView
+        android:id="@+id/ivIconParam"
+        android:layout_width="@dimen/default_param_icon_size"
+        android:layout_height="@dimen/default_param_icon_size"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/default_double_margin"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_death" />
+
+    <ImageView
+        android:id="@+id/ivSelectedParam"
+        android:layout_width="@dimen/default_big_margin"
+        android:layout_height="@dimen/default_big_margin"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/default_big_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_checkbox_filter" />
+
+    <TextView
+        android:id="@+id/tvTitleParam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_toStartOf="@id/ivSelectedParam"
+        android:layout_toEndOf="@id/ivIconParam"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black_100"
+        android:textSize="@dimen/default_text_size"
+        tools:text="Param" />
+
+</RelativeLayout>

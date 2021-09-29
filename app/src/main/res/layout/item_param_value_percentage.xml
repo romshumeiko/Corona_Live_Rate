@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_param_value_height">
+
+    <View
+        android:id="@+id/activeCasesDivider"
+        style="@style/DividerStyle" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/default_param_icon_size"
+        android:layout_height="@dimen/default_param_icon_size"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/default_margin"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_hearth" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_toEndOf="@id/ivIcon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/default_text_size"
+            tools:text="1,558 (60%)" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/default_small_text_size"
+            tools:text="Recovered / Discharged" />
+
+    </LinearLayout>
+
+</RelativeLayout>

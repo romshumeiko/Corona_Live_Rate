@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_toolbar_rl_toolbar_height"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/imbBack"
+            style="@style/ToolbarImbBackStyle" />
+
+        <TextView
+            android:id="@+id/tvToolBarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/default_big_margin"
+            android:layout_toStartOf="@+id/imbMenu"
+            android:layout_toEndOf="@+id/imbBack"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_toolbar_tv_toolbar_title_text_size"
+            tools:text="@string/item_toolbar_tv_toolbar_title_text" />
+
+        <ImageButton
+            android:id="@+id/imbMenu"
+            style="@style/ToolbarImbMenuStyle" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
