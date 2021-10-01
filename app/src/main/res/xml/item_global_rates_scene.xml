@@ -4,53 +4,43 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/paramCoronavirusCases"
-            android:visibility="gone" />
-
-        <Constraint
-            android:id="@+id/paramDeath"
-            android:visibility="gone" />
-
-        <Constraint
-            android:id="@+id/paramRecovered"
-            android:visibility="gone" />
+            android:id="@+id/flGlobalRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvGlobalRates" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/paramCoronavirusCases"
+            android:id="@+id/flGlobalRate"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/item_param_value_height"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tvGlobalRates" />
-
-        <Constraint
-            android:id="@+id/paramDeath"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/item_param_value_height"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/paramCoronavirusCases" />
-
-        <Constraint
-            android:id="@+id/paramRecovered"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/item_param_value_height"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/paramDeath" />
     </ConstraintSet>
 
     <Transition
         app:constraintSetEnd="@id/end"
         app:constraintSetStart="@+id/start"
-        app:duration="400">
+        app:duration="300">
         <OnClick
             app:clickAction="toggle"
-            app:targetId="@id/relativeLayout" />
+            app:targetId="@id/tvGlobalRates" />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="0.0"
+                android:scaleY="0.0"
+                app:framePosition="75"
+                app:motionTarget="@id/flGlobalRate" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                android:scaleX="1.0"
+                android:scaleY="1.0"
+                app:framePosition="100"
+                app:motionTarget="@id/flGlobalRate" />
+        </KeyFrameSet>
     </Transition>
 </MotionScene>
