@@ -7,7 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import rom.shumeiko.coronaliverate.data.Country
 
 class CountryViewModelFactory(private val application: Application,
-                              private val country: Country) :
+                              private val country: Country
+) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return CountryViewModel(application, country) as T

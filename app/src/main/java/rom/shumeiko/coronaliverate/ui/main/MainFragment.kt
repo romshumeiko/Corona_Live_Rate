@@ -1,8 +1,5 @@
 package rom.shumeiko.coronaliverate.ui.main
 
-import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -21,8 +18,6 @@ import rom.shumeiko.coronaliverate.storage.StatisticHolder
 import rom.shumeiko.coronaliverate.ui.countries.list.CountriesFragment
 import rom.shumeiko.coronaliverate.ui.countries.list.CountriesFragment.Companion.newInstance
 import rom.shumeiko.coronaliverate.ui.countries.list.CountriesFragment.OnCountryClickedListener
-import rom.shumeiko.coronaliverate.ui.params.list.ParamsDialogFragment
-import rom.shumeiko.coronaliverate.ui.params.list.ParamsDialogFragment.Companion.TAG
 import rom.shumeiko.coronaliverate.utils.UIUtils
 import java.io.IOException
 
