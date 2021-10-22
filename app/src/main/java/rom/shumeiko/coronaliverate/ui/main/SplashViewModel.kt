@@ -16,14 +16,14 @@ import rom.shumeiko.coronaliverate.storage.StatisticHolder
 
 class SplashViewModel : ViewModel() {
 
-    private val moshi = Moshi.Builder()
-        .add(KotlinJsonAdapterFactory())
-        .build()
+//    private val moshi = Moshi.Builder()
+//        .add(KotlinJsonAdapterFactory())
+//        .build()
 
     val ldDataLoaded = MutableLiveData<Boolean>()
     private val retrofit = Retrofit.Builder()
         .baseUrl(CoronaStatisticApi.BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .addConverterFactory(GsonConverterFactory.create())
         .build()
 
     private val coronaStatisticApi = retrofit.create(CoronaStatisticApi::class.java)

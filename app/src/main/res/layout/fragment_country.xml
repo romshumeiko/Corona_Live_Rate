@@ -71,6 +71,7 @@
                     android:layout_alignBottom="@id/rgTodayYesterday"
                     android:layout_marginStart="@dimen/fragment_country_tv_country_margin_start"
                     android:layout_marginEnd="@dimen/default_half_margin"
+                    android:layout_toStartOf="@id/rgTodayYesterday"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="@color/black_100"

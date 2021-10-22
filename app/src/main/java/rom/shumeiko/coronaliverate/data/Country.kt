@@ -1,13 +1,15 @@
 package rom.shumeiko.coronaliverate.data
 
 import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
 import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
 
 
 @Parcelize
 data class Country(
-    @Json(name = "country") var name: String,
+    @SerializedName("country")
+    var name: String,
     val countryInfo: CountryInfo,
     val cases: Int,
     val deaths: Int,

@@ -1,12 +1,13 @@
 package rom.shumeiko.coronaliverate.data
 
 import android.os.Parcelable
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class CountryInfo(
-    @Json(name = "_id") val id: Int,
+    @SerializedName("_id")
+    val id: Int,
     val iso2: String,
     val flag: String,
 ) : Parcelable
